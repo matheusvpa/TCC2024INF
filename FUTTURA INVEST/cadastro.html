@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abra sua conta!</title>
+    
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background: white;
+            font-weight: 500;
+            display: flex;
+            min-height: 100vh;
+            min-width: 100vw;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        header {
+            width: 100%;
+            background-color: white;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header img {
+            max-height: 100%;
+        }
+
+        main {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px; /* Ajuste de espaçamento entre o header e o main */
+        }
+
+        .columns {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px; /* Adicionado espaçamento entre colunas */
+        }
+
+        main h1 {
+            color: #052AA6;
+            font-size: 3rem;
+            font-family: Arial;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        main form {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        main form label {
+            display: flex;
+            flex-direction: column;
+            margin: 7px;
+            align-items: left;
+        }
+
+        main form label span {
+            font-size: 1.1rem;
+            margin-top: 2rem;
+        }
+
+        main form input {
+            background: #161923;
+            width: 60%; /* Alterado para ocupar toda a largura da coluna */
+            height: 40px; /* Reduzido a altura para melhorar o ajuste */
+            padding: 0 0.5rem;
+            margin-top: 5px; /* Reduzido espaçamento entre campos */
+            margin-bottom: 0.5rem; /* Adicionado espaçamento entre campos */
+            outline: none;
+            color: rgba(166, 166, 166);
+            font-size: 1rem;
+            border: 1px solid #040B18;
+            border-radius: 8px;
+        }
+
+        main form input[type="submit"] {
+            cursor: pointer;
+            width: 200px;
+            margin-top: 2rem;
+            margin-left: -40%;
+            border: none;
+            border-radius: 32px;
+            background: #052AA6;
+            color: white;
+            font-size: 1.1rem;
+            transition: all .3s ease-in-out;
+        }
+
+        main form input[type="submit"]:hover {
+            background: #5952d4;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .columns {
+                flex-direction: column; /* Alterado para uma coluna em telas pequenas */
+            }
+            .column {
+                margin-right: 0; /* Removido espaçamento entre colunas em telas pequenas */
+                margin-bottom: 20px; /* Adicionado espaçamento entre colunas em telas pequenas */
+            }
+            main h1 {
+                margin-bottom: 1.5rem; /* Ajuste para telas menores */
+            }
+            main form input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/LogotipoFuttura.png" alt="Logo da sua empresa" style="padding-top: 40px; max-width: 20%; margin-left: 40%;">
+        </a>
+    </header>
+
+    <main>
+        <div> 
+            <h1>Criar conta na Futtura Invest é mais fácil do que você imagina!</h1>
+            <h2>Preencha as informações abaixo para iniciar a criação da sua conta:</h2>
+        </div>
+        <div class="columns">
+
+            <div class="column">
+                <form action="">
+                    <label for="name">
+                        <span>Nome completo</span>
+                        <input type="text" id="name" name="name">
+                    </label>
+
+                    <label for="email">
+                        <span>E-mail</span>
+                        <input type="email" id="email" name="email">
+                    </label>
+
+                    <label for="confirmEmail">
+                        <span>Confirme seu e-mail</span>
+                        <input type="email" id="confirmEmail" name="confirmEmail">
+                    </label>
+                </form>
+            </div>
+
+            <div class="column">
+                <form action="">
+                    <label for="cpf">
+                        <span>Digite um CPF no formato: xxx.xxx.xxx-xx</span>
+                        <input type="text" name="cpf" \ Pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" \
+                            title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+                    </label>
+
+                    <label for="date">
+                        <span>Data de Nascimento</span>
+                        <input type="date" id="date" name="date">
+                    </label>
+
+                    <label for="numberphone">
+                        <span>Número de celular (somente números)</span>
+                        <input type="text" id="numberphone" name="numberphone" maxlength="11" oninput="this.value = this.value.replace(/[^0-9]/g, '');"> <!--Isso garante que só aceite números e que o limite seja até 11 números-->
+                    </label>
+                                       
+                </form>
+            </div>
+        </div>
+
+        <form action="">
+            <input type="submit" value="Abrir minha conta" id="button">
+        </form>
+
+    
+    </main>
+<!-- Footer Start -->
+<footer style="background-color: #052AA6; color: white; padding: 25px 100px;">
+    <h5 class="mb-4">Nossas informações</h5>
+    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i> Av. Brasil 0000 Centro, Cascavel - Paraná, Brasil</p>
+    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+55 45 999999999</p>
+    <p class="mb-2"><i class="fa fa-envelope me-3"></i>atendimento@futturainvest.com</p>
+    
+    <div class="d-flex pt-2">
+        <a class="btn btn-outline-light btn-social me-2" href="https://twitter.com/futturainvest"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-outline-light btn-social me-2" href="https://facebook.com/futturainvest"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-outline-light btn-social me-2" href="https://youtube.com/futturainvest"><i class="fab fa-youtube"></i></a>
+        <a class="btn btn-outline-light btn-social" href="https://linkedin/in/futturainvest"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+            
+    <div>
+        <h5 class="mb-4">Mais links</h5>
+        <a class="btn btn-link text-white-50 d-block mb-2" href="">Saiba mais</a>
+        <a class="btn btn-link text-white-50 d-block mb-2" href="">Entre em contato</a>
+        <a class="btn btn-link text-white-50 d-block mb-2" href="">Mais serviços</a>
+        <a class="btn btn-link text-white-50 d-block mb-2" href="">Política de Privacidade</a>
+        <a class="btn btn-link text-white-50 d-block mb-2" href="">Termos & Condições</a>
+    </div>
+            
+    <div class="col-lg-3 col-md-6">
+        <h5 class="mb-4">Links úteis</h5>
+        <div class="footer-menu">
+            <a href="#" class="text-white-50 d-block mb-2">Página inicial</a>
+            <a href="#" class="text-white-50 d-block mb-2">Cookies</a>
+            <a href="#" class="text-white-50 d-block mb-2">Ajuda</a>
+            <a href="#" class="text-white-50 d-block mb-2">Perguntas frequentes</a>
+    </div>
+
+    <div>
+        &copy; <a class="border-bottom text-white" href="https://freewebsitecode.com">Futtura Invest</a>, Todos os direitos reservados. Feito por <a class="border-bottom text-white" href="https://futturainvest.com">Futtura Invest</a>
+        
+        <a href="#" class="text-white-50 me-3">Página inicial</a>
+        <a href="#" class="text-white-50 me-3">Cookies</a>
+        <a href="#" class="text-white-50 me-3">Ajuda</a>
+        <a href="#" class="text-white-50">Perguntas frequentes</a>
+    </div>
+</footer>
+<!-- Footer End -->
+</body>
+</html>

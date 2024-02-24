@@ -1,6 +1,6 @@
 :root {
-    --primary: #00B98E;
-    --secondary: #FF6922;
+    --primary: #052AA6;
+    --secondary: #333333;
     --light: #EFFDF5;
     --dark: #0E2E50;
 }
@@ -12,8 +12,17 @@
     --dark: #FFC18E;
 } */
 
+/* começa aqui os testes */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* termina aqui os testes */
+
 .back-to-top {
-    position: fixed;
+    position: relative;
     display: none;
     right: 45px;
     bottom: 45px;
@@ -89,7 +98,7 @@
 }
 
 .navbar {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    box-shadow: 0 0 5px #052AA6;
 }
 
 .navbar .dropdown-toggle::after {
@@ -191,8 +200,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
-    background: var(--primary);
+    color: var(--primary);
+    background: var(--light);
     border-radius: 40px;
     font-size: 20px;
     transition: .5s;
@@ -248,7 +257,7 @@
 /*** Category ***/
 .cat-item div {
     background: #FFFFFF;
-    border: 1px dashed rgba(0, 185, 142, .3);
+    border: 1px dashed #052AA6;
     transition: .5s;
 }
 
@@ -277,7 +286,7 @@
 }
 
 .property-item {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    box-shadow: 0 0 30px #333333;
 }
 
 .property-item img {
@@ -289,17 +298,17 @@
 }
 
 .property-item .border-top {
-    border-top: 1px dashed rgba(0, 185, 142, .3) !important;
+    border-top: 1px dashed #052AA6 !important;
 }
 
 .property-item .border-end {
-    border-right: 1px dashed rgba(0, 185, 142, .3) !important;
+    border-right: 1px dashed #052AA6 !important;
 }
 
 
 /*** Team ***/
 .team-item {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+    box-shadow: 0 0 30px #333333;
     transition: .5s;
 }
 
@@ -341,7 +350,7 @@
 }
 
 .testimonial-carousel .testimonial-item .border {
-    border: 1px dashed rgba(0, 185, 142, .3) !important;
+    border: 1px dashed #052AA6 !important;
 }
 
 .testimonial-carousel .owl-nav {
@@ -385,7 +394,7 @@
     align-items: center;
     justify-content: center;
     color: var(--light);
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid #333333;
     border-radius: 35px;
     transition: .3s;
 }
@@ -420,13 +429,13 @@
 }
 
 .footer .form-control {
-    border-color: rgba(255,255,255,0.5);
+    border-color: #052AA6;
 }
 
 .footer .copyright {
     padding: 25px 0;
     font-size: 15px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
+    border-top: 1px solid white;
 }
 
 .footer .copyright a {
@@ -436,7 +445,7 @@
 .footer .footer-menu a {
     margin-right: 15px;
     padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
+    border-right: 1px solid whitesmoke;
 }
 
 .footer .footer-menu a:last-child {
