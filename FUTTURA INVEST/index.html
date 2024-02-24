@@ -31,7 +31,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body;">
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -41,57 +41,58 @@
         </div>
         <!-- Spinner End -->
 
-
-        <!-- Navbar Start -->
-        <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-                    <div class="icon p-2 me-2">
-                        <img class="img-fluid" src="img/LogotipoFuttura.png" alt="Icon" style="width: 90px; height: 30px;">
+<!-- Navbar Start -->
+<div class="container-fluid nav-bar fixed-top bg-black" style="background-color: #ffffff;">
+    <nav class="navbar navbar-expand-lg navbar-dark py-0 px-4">
+        <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+            <div class="icon p-2 me-2">
+                <img class="img-fluid" src="img/LogotipoFuttura.png" alt="Icon" style="width: 90px; height: 30px;">
+            </div>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+                <a href="index.html" class="nav-item nav-link active mx-3" style="color: #000000;">Como funciona?</a>
+                <a href="about.html" class="nav-item nav-link mx-3">Sobre nós</a>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mx-3" data-bs-toggle="dropdown">Empreendimentos</a>
+                    <div class="dropdown-menu rounded-0 m-0">
+                        <a href="index.html" class="dropdown-item">Prédios Residenciais</a>
+                        <a href="index.html" class="dropdown-item">Prédios Comerciais</a>
+                        <a href="index.html" class="dropdown-item">Galpões Logísticos</a>
+                        <a href="index.html" class="dropdown-item">Grupo de Casas</a>
+                        <a href="index.html" class="dropdown-item">Condomínios Residenciais</a>
+                        
+                        <a href="empreendimentos.html" class="dropdown-item">Veja as opções</a>
                     </div>
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></spwan>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link active">Como funciona?</a>
-                        <a href="about.html" class="nav-item nav-link">Sobre nós</a>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Empreendimentos</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="index.html" class="dropdown-item">Prédios Residenciais</a>
-                                <a href="index.html" class="dropdown-item">Prédios Comerciais</a>
-                                <a href="index.html" class="dropdown-item">Galpões Logísticos</a>
-                                <a href="index.html" class="dropdown-item">Grupo de Casas</a>
-                                <a href="index.html" class="dropdown-item">Condomínios Residenciais</a>
-                                
-                                <a href="empreendimentos.html" class="dropdown-item">Veja as opções</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Custos</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="index.html" class="dropdown-item">Taxas</a>
-                                <a href="index.html" class="dropdown-item">Custos</a>
-                            </div>
-                        </div>
-                        <a href="contato.html" class="nav-item nav-link">Contato</a>
-                        <a href="login.html" class="nav-item nav-link">Fazer login</a>
-                    </div>
-                    <a href="cadastro.html" class="btn btn-primary px-3 d-none d-lg-flex">Cadastre-se</a>
                 </div>
-            </nav>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle mx-3" data-bs-toggle="dropdown">Custos</a>
+                    <div class="dropdown-menu rounded-0 m-0">
+                        <a href="index.html" class="dropdown-item">Taxas</a>
+                        <a href="index.html" class="dropdown-item">Custos</a>
+                    </div>
+                </div>
+                <a href="contato.html" class="nav-item nav-link mx-3">Contato</a>
+                <a href="signinup.html" class="nav-item nav-link mx-3">Fazer login</a>
+            </div>
+            <a href="signinup.html" class="btn btn-primary px-3 d-none d-lg-flex mx-3" style="background-color: #052AA6;">Cadastre-se</a>
         </div>
-        <!-- Navbar End -->
+    </nav>
+</div>
+<!-- Navbar End -->
+
+
 
         <!-- Header Start -->
         <div class="container-fluid header bg-white p-0">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row" >
                 <div class="col-md-6 p-5 mt-lg-5">
                     <h1 class="display-5 animated fadeIn mb-4">Seja dono de <span style="color: #052AA6;">futuros empreendimentos</span> com pouco.</h1>
-                    <p class="animated fadeIn mb-4 pb-2">Invista de forma desbucratizada em imóveis que vão desde grupos residenciais até prédios comerciais, tenha seu dinheiro no setor que mais cresce no Brasil.</p>
-                    <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Quero me cadastrar!</a>
+                    <p class="animated fadeIn mb-4 pb-2">Invista de forma desbucratizada em imóveis que vão desde grupos reside nciais até prédios comerciais, tenha seu dinheiro no setor que mais cresce no Brasil.</p>
+                    <a href="signinup.html" class="btn btn-primary py-3 px-5 me-3 animated fadeIn" style="background-color: #052AA6;">Quero me cadastrar!</a>
                 </div>
                 <div class="col-md-6 animated fadeIn">
                     <div class="owl-carousel header-carousel">
