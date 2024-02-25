@@ -96,8 +96,14 @@ html, body {
 
 .navbar-light .navbar-brand {
     height: 75px;
-    color: black; /* Cor do texto da marca da navbar */
 }
+
+.navbar-brand img {
+    transform: scale(1.7); /* Aumenta em 50% o tamanho da logo */
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     color: black;
 }
