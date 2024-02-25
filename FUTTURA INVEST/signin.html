@@ -100,12 +100,9 @@ button[type="submit"] {
   font-size: 13px;
 }
 
+
 #signin {
   left: 25px;
-}
-
-#signup {
-  left: 450px;
 }
 
 i {
@@ -137,41 +134,24 @@ i {
     <div class="container">
         <div class="buttonsForm">
         <div class="btnColor"></div>
-        <button id="btnSignin">Entrar</button>
-        <button id="btnSignup">Inicie seu cadastro</button>
+        <button id="btnSignup">Acesse sua conta</button>
         </div>
 
         <form id="signin">
         <br>    
-        <h3>Insira seus dados e acesse sua conta</h3>
-
-        <input type="text" placeholder="E-mail" required />
-        <input type="password" placeholder="Senha" required />
-        <div class="divCheck">
-            <input type="checkbox" />
-            <span>Lembrar minha senha</span>
-        </div>
-        <button type="submit">Entrar</button>
-        </form>
-
-        <form id="signup">
+        <h3>Insira seus dados e acesse sua conta!</h3>
             
-        <br>    
-        <h3>Insira seus dados e acesse sua conta</h3> <!-- Corrigido aqui, era <h> -->
-            <input type="text" placeholder="Nome completo" required/>
-
+        <br>
             <input type="text" name="cpf" placeholder="CPF no formato: xxx.xxx.xxx-xx" Pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
 
-            <input type="text" placeholder="Email" required />
-
             <input type="password" placeholder="Senha" required />
-
-            <div class="divCheck">
-            <input type="checkbox" required />
-            <span>Estou ciente sobre a política de privacidade e os termos de uso</span>
-        </div>
         <br>
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Acessar minha conta</button>
+        
+        <a style="margin: 15px;" href="signup.html">
+          <h5>Já tem conta? Acesse ela clicando aqui!</h5>
+        </a>
+
         </form>
     </div>
 
