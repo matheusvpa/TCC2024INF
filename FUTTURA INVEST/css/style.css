@@ -99,7 +99,7 @@ html, body {
 }
 
 .navbar-brand img {
-    transform: scale(1.7); /* Aumenta em 50% o tamanho da logo */
+    transform: scale(1.7); /* Quanto maior a escala, mais aumenta a logo */
     margin-left: 30px;
     margin-top: 15px;
 }
@@ -114,7 +114,7 @@ html, body {
 .navbar-light .navbar-nav .nav-link {
     color: var(--light);
     font-weight: 500;
-    color: black; /* Cor do texto dos links da navbar */
+    color: black; 
 }
 
 @media (max-width: 991.98px) {
@@ -155,12 +155,21 @@ html, body {
 
 /*** Header ***/
 .header {
-    margin-top: 80px; /* Ajustando o espaçamento do conteúdo abaixo da barra de navegação */
+    margin-top: 20px; 
     background-color: var(--primary);
-    color: black; /* Cor do texto do cabeçalho */
-    padding: 5rem;
+    color: black; 
+    padding: 2rem 5rem; 
     text-align: center;
+    height: auto; 
+    max-height: 485px; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
 }
+
+
+
 
 .header h1 {
     font-size: 2.5rem;
