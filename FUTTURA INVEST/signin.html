@@ -142,14 +142,17 @@ i {
         <h3>Insira seus dados e acesse sua conta!</h3>
             
         <br>
-            <input type="text" name="cpf" placeholder="CPF no formato: xxx.xxx.xxx-xx" Pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+            <input type="text" name="cpf" placeholder="CPF no formato: xxx.xxx.xxx-xx" Pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" autocomplete="off" class="cpfcadastro">
+            <script src="js/formatacpf.js"></script>
 
-            <input type="password" placeholder="Senha" required />
+            <input type="password" placeholder="Senha" required /> <br>
         <br>
-        <button type="submit">Acessar minha conta</button>
+        <a style="margin: 50px; background-color: #052AA6; color: white; padding: 10px; border-radius: 5px;" href="dashcliente/index.html"
+          <button type="submit">Acessar minha conta</button>
+        </a>
         
-        <a style="margin: 15px;" href="signup.html">
-          <h5>Já tem conta? Acesse ela clicando aqui!</h5>
+        <a style="margin: 10px;" href="signup.html">
+          <h6>Não tem conta ainda?</h6>
         </a>
 
         </form>
