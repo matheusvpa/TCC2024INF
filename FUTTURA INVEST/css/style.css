@@ -17,14 +17,6 @@ html, body {
     
 }
 
-.back-to-top {
-    position: relative;
-    display: none;
-    right: 45px;
-    bottom: 45px;
-    z-index: 99;
-}
-
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -46,7 +38,10 @@ html, body {
     color: black; /* Cor do texto dos botões */
 }
 
-.btn.btn-primary,
+.btn.btn-primary{
+    background-color: #052AA6;
+    color: #FFFFFF;
+}
 .btn.btn-secondary {
     color: #FFFFFF;
 }
