@@ -1,272 +1,294 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Responsive Dashboard Design #01 | AsmrProg</title>
+    <title>Responsive Dashboard Design #1 | AsmrProg</title>
 </head>
 
 <body>
 
     <div class="container">
-
-        <aside class="left-section">
-            <div class="logo">
-                <button class="menu-btn" id="menu-close">
-                    <i class='bx bx-log-out-circle'></i>
-                </button>
-                <img src="../img/LogotipoFuttura.png">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="../img/6.png">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
             </div>
 
             <div class="sidebar">
-                <div class="item" id="active">
-                    <i class='bx bx-home-alt-2'></i>
-                    <a href="#">Visão Geral </a>
-                </div>
-
-                <br> 
-
-                <div class="item">
-                    <i class='bx bx-grid-alt'></i>
-                    <a href="#">Meus Investimentos</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-folder'></i>
-                    <a href="#">Para você</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-folder'></i>
-                    <a href="#">Processos abertos</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-message-square-dots'></i>
-                    <a href="#">Avisos</a>
-                </div>
-                <div class="item">
-                    <i class='bx bx-cog'></i>
-                    <a href="#">Minha conta</a>
-                </div>
+                <a href="#">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Visão Geral</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Meus <br> Empreendimentos</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Processos <br>Abertos</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">insights</span>
+                    <h3>Mais opções</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">mail_outline</span>
+                    <h3>Suporte/Chat</h3>
+                    <span class="message-count">27</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        inventory
+                    </span>
+                    <h3>Sale List</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
             </div>
-
-
-            <div class="upgrade">
-                <h5>Ajuda</h5>
-                <div class="link">
-                    <a href="../contato.html">Precisa de <b>atendimento</b>?</a>
-                    <i class='bx bxs-chevron-right'></i>
-                </div>
-            </div>
-
         </aside>
+        <!-- End of Sidebar Section -->
 
+        <!-- Main Content -->
         <main>
-            <header>
-                <button class="menu-btn" id="menu-open">
-                    <i class='bx bx-menu'></i>
-                </button>
-                <h5>Olá <b>MATHEUS</b>, bem-vindo de volta!</h5>
-            </header>
-
-            <div class="separator">
-                <div class="info">
-                    <h3>Tenha sua visão geral abaixo:</h3>
+            <h1>Analytics</h1>
+            <!-- Analyses -->
+            <div class="analyse">
+                <div class="sales">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Total Sales</h3>
+                            <h1>$65,024</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+81%</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="search">
-                    <i class='bx bx-search'></i>
-                    <input type="text" placeholder="Pesquisar...">
+                <div class="visits">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Site Visit</h3>
+                            <h1>24,981</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>-48%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="searches">
+                    <div class="status">
+                        <div class="info">
+                            <h3>Searches</h3>
+                            <h1>14,147</h1>
+                        </div>
+                        <div class="progresss">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="percentage">
+                                <p>+21%</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!-- End of Analyses -->
 
-            <div class="analytics">
-                <div class="item">
-                    <div class="progress">
-                        <div class="info">
-                            <h5>Locations</h5>
-                            <p>35 Lessons</p>
-                        </div>
-                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                            aria-valuemax="100"></div>
+            <!-- New Users Section -->
+            <div class="new-users">
+                <h2>New Users</h2>
+                <div class="user-list">
+                    <div class="user">
+                        <img src="images/profile-2.jpg">
+                        <h2>Jack</h2>
+                        <p>54 Min Ago</p>
                     </div>
-                    <i class='bx bx-map-pin'></i>
-                </div>
-                <div class="item">
-                    <div class="progress">
-                        <div class="info">
-                            <h5>People</h5>
-                            <p>30 Lessons</p>
-                        </div>
-                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                            aria-valuemax="100"></div>
+                    <div class="user">
+                        <img src="images/profile-3.jpg">
+                        <h2>Amir</h2>
+                        <p>3 Hours Ago</p>
                     </div>
-                    <i class='bx bx-user-voice'></i>
-                </div>
-                <div class="item">
-                    <div class="progress">
-                        <div class="info">
-                            <h5>Airport</h5>
-                            <p>45 Lessons</p>
-                        </div>
-                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                            aria-valuemax="100"></div>
+                    <div class="user">
+                        <img src="images/profile-4.jpg">
+                        <h2>Ember</h2>
+                        <p>6 Hours Ago</p>
                     </div>
-                    <i class='bx bxs-plane-land'></i>
-                </div>
-                <div class="item">
-                    <div class="progress">
-                        <div class="info">
-                            <h5>Places</h5>
-                            <p>20 Lessons</p>
-                        </div>
-                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-                            aria-valuemax="100"></div>
+                    <div class="user">
+                        <img src="images/plus.png">
+                        <h2>More</h2>
+                        <p>New User</p>
                     </div>
-                    <i class='bx bxs-castle'></i>
                 </div>
             </div>
+            <!-- End of New Users Section -->
 
-            <div class="separator">
-                <div class="info">
-                    <h3>Planning</h3>
-                    <a href="#">View All</a>
-                </div>
-                <input type="date" value="2023-10-15">
+            <!-- Recent Orders Table -->
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Course Number</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#">Show All</a>
             </div>
+            <!-- End of Recent Orders -->
 
-            <div class="planning">
-                <div class="item">
-                    <div class="left">
-                        <div class="icon">
-                            <i class='bx bx-book-alt'></i>
-                        </div>
-                        <div class="details">
-                            <h5>Reading - Topic 1</h5>
-                            <p>8:00 - 10:00</p>
-                        </div>
-                    </div>
-                    <i class='bx bx-dots-vertical-rounded'></i>
-                </div>
-                <div class="item">
-                    <div class="left">
-                        <div class="icon">
-                            <i class='bx bx-edit-alt'></i>
-                        </div>
-                        <div class="details">
-                            <h5>Writing - Topic 2</h5>
-                            <p>13:00 - 14:00</p>
-                        </div>
-                    </div>
-                    <i class='bx bx-dots-vertical-rounded'></i>
-                </div>
-                <div class="item">
-                    <div class="left">
-                        <div class="icon">
-                            <i class='bx bx-headphone'></i>
-                        </div>
-                        <div class="details">
-                            <h5>Listening - Topic 1</h5>
-                            <p>15:00 - 16:00</p>
-                        </div>
-                    </div>
-                    <i class='bx bx-dots-vertical-rounded'></i>
-                </div>
-                <div class="item">
-                    <div class="left">
-                        <div class="icon">
-                            <i class='bx bx-volume-low'></i>
-                        </div>
-                        <div class="details">
-                            <h5>Listening - Topic 2</h5>
-                            <p>19:00 - 20:00</p>
-                        </div>
-                    </div>
-                    <i class='bx bx-dots-vertical-rounded'></i>
-                </div>
-            </div>
         </main>
+        <!-- End of Main Content -->
 
-        <aside class="right-section">
-            <div class="top">
-                <i class='bx bx-bell'></i>
+        <!-- Right Section -->
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                    <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+                </div>
+
                 <div class="profile">
-                    <div class="left">
-                        <img src="assets/profile.jpg">
-                        <div class="user">
-                            <h5>Reza Mehdikhanlou</h5>
-                            <a href="#">Basic Plan</a>
+                    <div class="info">
+                        <p>Hey, <b>Reza</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="images/profile-1.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <!-- End of Nav -->
+
+            <div class="user-profile">
+                <div class="logo">
+                    <img src="images/logo.png">
+                    <h2>AsmrProg</h2>
+                    <p>Fullstack Web Developer</p>
+                </div>
+            </div>
+
+            <div class="reminders">
+                <div class="header">
+                    <h2>Reminders</h2>
+                    <span class="material-icons-sharp">
+                        notifications_none
+                    </span>
+                </div>
+
+                <div class="notification">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            volume_up
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
                         </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
                     </div>
-                    <i class='bx bxs-chevron-right'></i>
                 </div>
+
+                <div class="notification deactive">
+                    <div class="icon">
+                        <span class="material-icons-sharp">
+                            edit
+                        </span>
+                    </div>
+                    <div class="content">
+                        <div class="info">
+                            <h3>Workshop</h3>
+                            <small class="text_muted">
+                                08:00 AM - 12:00 PM
+                            </small>
+                        </div>
+                        <span class="material-icons-sharp">
+                            more_vert
+                        </span>
+                    </div>
+                </div>
+
+                <div class="notification add-reminder">
+                    <div>
+                        <span class="material-icons-sharp">
+                            add
+                        </span>
+                        <h3>Add Reminder</h3>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="separator" id="first">
-                <h4>Statistics</h4>
-            </div>
+        </div>
 
-            <div class="stats">
-                <div class="item">
-                    <div class="top">
-                        <p>Courses</p>
-                        <p>Completed</p>
-                    </div>
-                    <div class="bottom">
-                        <div class="line"></div>
-                        <h3>02</h3>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="top">
-                        <p>Total Points</p>
-                        <p>Gained</p>
-                    </div>
-                    <div class="bottom">
-                        <div class="line"></div>
-                        <h3>250</h3>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="top">
-                        <p>Courses</p>
-                        <p>In Progress</p>
-                    </div>
-                    <div class="bottom">
-                        <div class="line"></div>
-                        <h3>03</h3>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="top">
-                        <p>Tasks</p>
-                        <p>Finished</p>
-                    </div>
-                    <div class="bottom">
-                        <div class="line"></div>
-                        <h3>250</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="separator">
-                <h4>Weekly Work</h4>
-            </div>
-
-            <div class="weekly">
-                <div class="title">
-                    <div class="line"></div>
-                    <h5>Tasks This Week</h5>
-                </div>
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                </div>
-            </div>
-
-        </aside>
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="orders.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
