@@ -219,3 +219,17 @@ html, body {
 .breadcrumb-item + .breadcrumb-item::before {
     color: #DDDDDD;
 }
+
+/* CSS para estilizar o fundo do campo de "vantagens de investir" */
+.cat-item {
+    padding: 15px; 
+    margin-bottom: 20px; 
+    background-color: #e6ecff !important; 
+    border-radius: 10px;
+
+}
+
+.cat-item .icon img {
+    max-width: 50px;
+    max-height: 50px;
+}
