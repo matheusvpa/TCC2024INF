@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+          <img src="../img/LogotipoFuttura.png" alt="Logo da sua empresa" style="padding-top: 10px; max-width: 30%; margin-left: 15%;">        </a>
+    </header>
+    
+    <div class="container">
+        <div class="buttonsForm">
+        <div class="btnColor"></div>
+        <button id="btnSignup">Inicie seu cadastro</button>
+        </div>
+
+        <form id="signin">
+        <br>    
+        <h3>Insira seus dados e abra sua conta na Futtura Invest!</h3>
+
+        <form id="signup">
+            
+        <br>
+            <input type="text" placeholder="Nome completo" required/>
+
+            <input type="text" name="cpf" placeholder="CPF no formato: xxx.xxx.xxx-xx" Pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" autocomplete="off" class="cpfcadastro">
+            <script src="js/formatacpf.js"></script>
+
+            <input type="text" placeholder="Email" required />
+
+            <input type="password" placeholder="Senha" required />
+
+            <div class="divCheck">
+            <input type="checkbox" required />
+            <span>Estou ciente sobre a política de privacidade e os termos de uso</span> <br>
+        <br>
+
+        <button class="botaosubmit" type="submit">Cadastrar</button>
+
+
+        </form>
+        <a style="margin: 15px; " href="signin.html">
+          <h5>Já tem conta? Acesse ela clicando aqui!</h5>
+        </a>
+    </div>
+
+  <script>
+    var formSignin = document.querySelector('#signin');
+    var formSignup = document.querySelector('#signup');
+    var btnColor = document.querySelector('.btnColor');
+
+    document.querySelector('#btnSignin')
+      .addEventListener('click', () => {
+        formSignin.style.left = "25px";
+        formSignup.style.left = "450px";
+        btnColor.style.left = "0px";
+    });
+
+    document.querySelector('#btnSignup')
+      .addEventListener('click', () => {
+        formSignin.style.left = "-450px";
+        formSignup.style.left = "25px";
+        btnColor.style.left = "110px";
+    });
+  </script>
+</body>
+</html>
