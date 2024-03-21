@@ -1,73 +1,100 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://kit.fontawesome.com/cf6fa412bd.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Patrimônio</title>
+    <link rel="stylesheet" href="formulario.css" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+          crossorigin="anonymous"/>
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"/>
 </head>
-<body>
-    <header>
-        <a href="index.html">
-          <img src="../img/LogotipoFuttura.png" alt="Logo da sua empresa" style="padding-top: 10px; max-width: 30%; margin-left: 15%;">        </a>
-    </header>
-    
-    <div class="container">
-        <div class="buttonsForm">
-        <div class="btnColor"></div>
-        <button id="btnSignup">Inicie seu cadastro</button>
-        </div>
-
-        <form id="signin">
-        <br>    
-        <h3>Insira seus dados e abra sua conta na Futtura Invest!</h3>
-
-        <form id="signup">
-            
-        <br>
-            <input type="text" placeholder="Nome completo" required/>
-
-            <input type="text" name="cpf" placeholder="CPF no formato: xxx.xxx.xxx-xx" Pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" autocomplete="off" class="cpfcadastro">
-            <script src="js/formatacpf.js"></script>
-
-            <input type="text" placeholder="Email" required />
-
-            <input type="password" placeholder="Senha" required />
-
-            <div class="divCheck">
-            <input type="checkbox" required />
-            <span>Estou ciente sobre a política de privacidade e os termos de uso</span> <br>
-        <br>
-
-        <button class="botaosubmit" type="submit">Cadastrar</button>
-
-
-        </form>
-        <a style="margin: 15px; " href="signin.html">
-          <h5>Já tem conta? Acesse ela clicando aqui!</h5>
-        </a>
+<body id="checkout-page">
+<div id="fade" class="hide">
+    <div id="loader" class="spinner-border text-info hide" role="status">
+        <span class="visually-hidden">Loading...</span>
     </div>
-
-  <script>
-    var formSignin = document.querySelector('#signin');
-    var formSignup = document.querySelector('#signup');
-    var btnColor = document.querySelector('.btnColor');
-
-    document.querySelector('#btnSignin')
-      .addEventListener('click', () => {
-        formSignin.style.left = "25px";
-        formSignup.style.left = "450px";
-        btnColor.style.left = "0px";
-    });
-
-    document.querySelector('#btnSignup')
-      .addEventListener('click', () => {
-        formSignin.style.left = "-450px";
-        formSignup.style.left = "25px";
-        btnColor.style.left = "110px";
-    });
-  </script>
-</body>
+    <div id="message" class="hide">
+        <div class="alert alert-light" role="alert">
+            <h4>Mensagem:</h4>
+            <p></p>
+            <button id="close-message" type="button" class="btn btn-secondary">
+                Fechar
+            </button>
+        </div>
+    </div>
+</div>
+<div id="order-form-container" class="container p-6 my-md-4 px-md-0">
+    <div id="form-header" class="text-center">
+        <div class="logotipo-container">
+            <img src="../img/LogotipoFuttura.png" class="logotipo">
+        </div>
+        <h2>Cadastre seus dados financeiros</h2>
+        <p>Preencha os campos abaixo</p>
+    </div>
+    <form id="financial-info-form">
+        <div class="row mb-3">
+            <div class="col-12 col-md-6 form-floating">
+                <input type="text" class="form-control shadow-none" id="monthly-income" name="monthly-income"
+                       placeholder="Rendimentos Mensais" required>
+                <label for="monthly-income">Rendimentos Mensais</label>
+            </div>
+            <div class="col-12 col-md-6 form-floating">
+                <input type="text" class="form-control shadow-none" id="real-estate-assets" name="real-estate-assets"
+                       placeholder="Total em Bens Imóveis" required>
+                <label for="real-estate-assets">Total em Bens Imóveis</label>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12 col-md-6 form-floating">
+                <input type="text" class="form-control shadow-none" id="movable-assets" name="movable-assets"
+                       placeholder="Total de Bens Móveis" required>
+                <label for="movable-assets">Total de Bens Móveis</label>
+            </div>
+            <div class="col-12 col-md-6 form-floating">
+                <input type="text" class="form-control shadow-none" id="other-assets" name="other-assets"
+                       placeholder="Total de Outros Bens" required>
+                <label for="other-assets">Total de Outros Bens</label>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12 col-md-6">
+                <label for="futtura-linked" class="form-label">Pessoa vinculada a Futtura Invest?</label>
+                <select class="form-select" id="futtura-linked" name="futtura-linked">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+            <div class="col-12 col-md-6">
+                <label for="politically-exposed" class="form-label">Sou pessoa politicamente exposta?</label>
+                <select class="form-select" id="politically-exposed" name="politically-exposed">
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12 col-md-6">
+                <label for="us-citizenship" class="form-label">Cidadania americana?</label>
+                <select class="form-select" id="us-citizenship" name="us-citizenship">
+                  <option value="sim">Sim</option>
+                  <option value="nao">Não</option>
+                </select>
+                  </div>
+                  </div>
+                  <!-- Aqui seria o botão de cadastrado para passar para a próxima página -->
+                  <div class="d-flex justify-content-end">
+                  <button id="save-btn" type="submit" class="btn btn-primary">
+                    Cadastrar
+                  </button>
+            </div>                  
+        </div>
+    </form>
+  </body>
 </html>
