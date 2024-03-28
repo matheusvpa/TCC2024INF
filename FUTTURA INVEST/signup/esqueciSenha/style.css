@@ -1,0 +1,26 @@
+.container {
+    margin-top: 3vw;
+    justify-content: center;
+}
+
+.logotipo{
+    justify-content: center;
+    display: flex;
+}
+
+.img {
+    width: 10vw;
+    margin: 3vw;
+}
+
+form div {
+    margin-bottom: 20px; 
+}
+
+form label {
+    margin-bottom: 5px; 
+}
+
+form input, form button {
+    margin-bottom: 10px; 
+}
