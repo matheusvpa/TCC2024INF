@@ -17,7 +17,7 @@
 <!--begin::Head-->
 
 <head>
-    <titleb>BOA NOITE</title>
+    <titleb>BOM DIA!</title>
 
     <link rel="shortcut icon" href="../../img/favicon.png" />
 
