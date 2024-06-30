@@ -11,6 +11,7 @@ if(isset($_POST['submit'])){
 
     $result = mysqli_query($conexao, "INSERT INTO tabela(nome, cpf, email, senha) VALUES('$nome','$cpf','$email','$senha')");
 
+    header("location: signin.php");
 }
 
 ?>
