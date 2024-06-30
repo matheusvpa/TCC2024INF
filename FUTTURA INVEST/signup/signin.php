@@ -126,15 +126,16 @@ i {
 .botaosubmit{ 
   background-color: #052AA6; 
   color: white; 
-  padding: 10px; 
+  padding: 5px; 
   border-radius: 5px;
+  margin-left:-1px;
 }
 </style>
 
 <body>
     <header>
         <a href="index.html">
-            <img src="img/LogotipoFuttura.png" alt="Logo da sua empresa" style="padding-top: 10px; max-width: 30%; margin-left: 15%;">
+            <img src="../img/LogotipoFuttura.png" alt="Logo da sua empresa" style="padding-top: 10px; max-width: 30%; margin-left: 15%;">
         </a>
     </header>
     
@@ -149,8 +150,8 @@ i {
         <h3>Insira seus dados e acesse sua conta!</h3>
             
         <br>
-            <input type="text" name="cpf" placeholder="CPF no formato: xxx.xxx.xxx-xx" Pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" autocomplete="off" class="cpfcadastro">
-            <script src="js/formatacpf.js"></script>
+            <input type="text" name="cpf" placeholder="CPF no formato: xxx.xxx.xxx-xx" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" autocomplete="off" class="cpfcadastro">
+            <script src="../js/formatacpf.js"></script>
 
             <input type="password" name='senha' placeholder="Senha" required /> <br>
         <br>

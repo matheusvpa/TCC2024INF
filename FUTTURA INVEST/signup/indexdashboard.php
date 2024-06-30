@@ -25,12 +25,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" /> <!--end::Fonts-->
 
     <!--begin::Vendor Stylesheets(used for this page only)-->
-    <link href="dashboard/bootstrap5admindashboard-main/css/datatables.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="dashboard/bootstrap5admindashboard-main/css/vis-timeline.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../dashboard/bootstrap5admindashboard/css/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../dashboard/bootstrap5admindashboard-main/css/vis-timeline.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Vendor Stylesheets-->
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-    <link href="dashboard/bootstrap5admindashboard-main/css/plugins.bundle.css" rel="stylesheet" type="text/css" />
-    <link href="dashboard/bootstrap5admindashboard-main/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../dashboard/bootstrap5admindashboard-main/css/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../dashboard/bootstrap5admindashboard-main/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
 
 </head>
@@ -1558,7 +1558,7 @@
                                 <div class="cursor-pointer symbol symbol-circle symbol-35px symbol-md-40px"
                                     data-kt-menu-trigger="{default:'click', lg: 'hover'}" data-kt-menu-attach="parent"
                                     data-kt-menu-placement="bottom-end">
-                                    <img alt="Pic" src="images/avatars/300-1.jpg" />
+                                    <img alt="Pic" src="../dashboard/css/images/avatars/300-1.jpg" />
                                 </div>
 
                                 <!--begin::User account menu-->
@@ -1569,7 +1569,7 @@
                                         <div class="menu-content d-flex align-items-center px-3">
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-50px me-5">
-                                                <img alt="Logo" src="images/avatars/300-1.jpg" />
+                                                <img alt="Logo" src="../dashboard/css/images/avatars/300-1.jpg" />
                                             </div>
                                             <!--end::Avatar-->
 
