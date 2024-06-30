@@ -100,15 +100,8 @@ button[type="submit"] {
   font-size: 13px;
 }
 
-
 #signin {
   left: 25px;
-}
-
-i {
-  position: absolute;
-  left: 0;
-  padding: 10px 10px;
 }
 
 .iEmail {
@@ -133,56 +126,43 @@ i {
 </style>
 
 <body>
-    <header>
-        <a href="index.html">
-            <img src="../img/LogotipoFuttura.png" alt="Logo da sua empresa" style="padding-top: 10px; max-width: 30%; margin-left: 15%;">
-        </a>
-    </header>
+<header>
+  <a href="index.html">
+    <img src="../img/LogotipoFuttura.png" alt="Logo da sua empresa" style="padding-top: 10px; max-width: 30%; margin-left: 15%;">
+  </a>
+</header>
     
-    <div class="container">
-        <div class="buttonsForm">
-        <div class="btnColor"></div>
-        <button id="btnSignup">Acesse sua conta</button>
-        </div>
+<div class="container">
+  <div class="buttonsForm">
+    <div class="btnColor"></div>
+    <button id="btnSignup">Acesse sua conta</button>
+  </div>
 
-        <form action='login.php' id="signin" method="POST">
-        <br>    
-        <h3>Insira seus dados e acesse sua conta!</h3>
-            
-        <br>
-            <input type="text" name="cpf" placeholder="CPF no formato: xxx.xxx.xxx-xx" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" autocomplete="off" class="cpfcadastro">
-            <script src="../js/formatacpf.js"></script>
-
-            <input type="password" name='senha' placeholder="Senha" required /> <br>
-        <br>
-
-        <button class="botaosubmit" name="submit" type="submit">Acessar minha conta</button>
+  <form action="login.php" id="signin" method="POST">
+    <br>    
+    <h3>Insira seus dados e acesse sua conta!</h3>
+    <br>
+    <input type="text" name="cpf" id="cpf" placeholder="CPF no formato: xxx.xxx.xxx-xx" maxlength="14" autocomplete="off" required oninput="formatarCPF(this)">
+    
+    <input type="password" name="senha" placeholder="Senha" required>
+    <br><br>
+    
+    <button class="botaosubmit" name="submit" type="submit">Acessar minha conta</button>
         
-        <a style="margin: 10px;" href="signup-inicio1.php">
-          <h6>Não tem conta ainda?</h6>
-        </a>
+    <a style="margin: 10px;" href="signup-inicio1.php">
+      <h6>Não tem conta ainda?</h6>
+    </a>
+  </form>
+</div>
 
-        </form>
-    </div>
+<script>
+function formatarCPF(campo) {
+  campo.value = campo.value.replace(/\D/g, ''); // Remove tudo que não é dígito
+  campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o ponto após o terceiro dígito
+  campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o segundo ponto após o sexto dígito
+  campo.value = campo.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca o hífen antes dos dois últimos dígitos
+}
+</script>
 
-  <script>
-    var formSignin = document.querySelector('#signin');
-    var formSignup = document.querySelector('#signup');
-    var btnColor = document.querySelector('.btnColor');
-
-    document.querySelector('#btnSignin')
-      .addEventListener('click', () => {
-        formSignin.style.left = "25px";
-        formSignup.style.left = "450px";
-        btnColor.style.left = "0px";
-    });
-
-    document.querySelector('#btnSignup')
-      .addEventListener('click', () => {
-        formSignin.style.left = "-450px";
-        formSignup.style.left = "25px";
-        btnColor.style.left = "110px";
-    });
-  </script>
 </body>
 </html>
