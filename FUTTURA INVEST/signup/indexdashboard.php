@@ -17,7 +17,7 @@
 <!--begin::Head-->
 
 <head>
-    <title>Bem-vindo à Futtura Invest!</title>
+    <titleb>BOA NOITE</title>
 
     <link rel="shortcut icon" href="../../img/favicon.png" />
 
