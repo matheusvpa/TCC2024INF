@@ -65,7 +65,7 @@
 		</ul>
 		<ul class="side-menu">
 			<li>
-				<a href="#">
+				<a href="config.php">
 					<i class='bx bxs-cog' ></i>
 					<span class="text">Configurações</span>
 				</a>
@@ -100,7 +100,7 @@
 				<i class='bx bxs-bell' ></i>
 			</a>
 			<a href="#" class="profile">
-				<img src="#">
+				<img src="../img/brunodill.png">
 			</a>
 		</nav>
 		<!-- NAVBAR -->

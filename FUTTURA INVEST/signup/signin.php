@@ -127,7 +127,7 @@ button[type="submit"] {
 
 <body>
 <header>
-  <a href="index.html">
+  <a href="signin.php">
     <img src="../img/LogotipoFuttura.png" alt="Logo da sua empresa" style="padding-top: 10px; max-width: 30%; margin-left: 15%;">
   </a>
 </header>

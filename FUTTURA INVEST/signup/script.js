@@ -84,3 +84,4 @@ window.addEventListener('load', function () {
         themeImage.src = localStorage.getItem('logoSrc');
     }
 });
+
