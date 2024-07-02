@@ -19,36 +19,6 @@ menuBar.addEventListener('click', function () {
     sidebar.classList.toggle('hide');
 })
 
-const searchButton = document.querySelector('#content nav form .form-input button');
-const searchButtonIcon = document.querySelector('#content nav form .form-input button .bx');
-const searchForm = document.querySelector('#content nav form');
-
-searchButton.addEventListener('click', function (e) {
-    if (window.innerWidth < 576) {
-        e.preventDefault();
-        searchForm.classList.toggle('show');
-        if (searchForm.classList.contains('show')) {
-            searchButtonIcon.classList.replace('bx-search', 'bx-x');
-        } else {
-            searchButtonIcon.classList.replace('bx-x', 'bx-search');
-        }
-    }
-})
-
-if (window.innerWidth < 768) {
-    sidebar.classList.add('hide');
-} else if (window.innerWidth > 576) {
-    searchButtonIcon.classList.replace('bx-x', 'bx-search');
-    searchForm.classList.remove('show');
-}
-
-window.addEventListener('resize', function () {
-    if (this.innerWidth > 576) {
-        searchButtonIcon.classList.replace('bx-x', 'bx-search');
-        searchForm.classList.remove('show');
-    }
-})
-
 const switchMode = document.getElementById('switch-mode');
 const themeImage = document.getElementById('theme-image');
 
@@ -56,25 +26,26 @@ const themeImage = document.getElementById('theme-image');
 if (localStorage.getItem('darkMode') === 'enabled') {
     document.body.classList.add('dark');
     switchMode.checked = true;
-    themeImage.src = localStorage.getItem('logoSrc') || '../img/LogotipoFundoBranco.png'; // Verificar a logo salva ou usar padrão
+    themeImage.src = localStorage.getItem('logoSrc') || '../img/LogoFundoTransparente.png'; // Verificar a logo salva ou usar padrão
 } else {
     document.body.classList.remove('dark');
     switchMode.checked = false;
-    themeImage.src = localStorage.getItem('logoSrc') || '../img/LogoFundoTransparente.png'; // Verificar a logo salva ou usar padrão
+    themeImage.src = localStorage.getItem('logoSrc') || '../img/LogotipoFundoBranco.png'; // Verificar a logo salva ou usar padrão
 }
+
 
 // Salvar tema e logo no localStorage ao alterar
 switchMode.addEventListener('change', function () {
     if (this.checked) {
         document.body.classList.add('dark');
-        themeImage.src = '../img/LogotipoFundoBranco.png'; // Alterando a imagem para o tema dark
+        themeImage.src = '../img/LogoFundoTransparente.png'; // Alterando a imagem para o tema dark
         localStorage.setItem('darkMode', 'enabled');
-        localStorage.setItem('logoSrc', '../img/LogotipoFundoBranco.png'); // Salvar logo correspondente ao tema dark
+        localStorage.setItem('logoSrc', '../img/LogoFundoTransparente.png'); // Salvar logo correspondente ao tema dark
     } else {
         document.body.classList.remove('dark');
-        themeImage.src = '../img/LogoFundoTransparente.png'; // Alterando a imagem para o tema light
+        themeImage.src = '../img/LogotipoFundoBranco.png'; // Alterando a imagem para o tema light
         localStorage.setItem('darkMode', 'disabled');
-        localStorage.setItem('logoSrc', '../img/LogoFundoTransparente.png'); // Salvar logo correspondente ao tema light
+        localStorage.setItem('logoSrc', '../img/LogotipoFundoBranco.png'); // Salvar logo correspondente ao tema light
     }
 });
 
@@ -84,4 +55,3 @@ window.addEventListener('load', function () {
         themeImage.src = localStorage.getItem('logoSrc');
     }
 });
-

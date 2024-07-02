@@ -90,8 +90,6 @@
 			<a href="#" class="nav-link">Menu</a>
 			<form action="#">
 				<div class="form-input">
-					<input type="search" placeholder="Pesquisar...">
-					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
 			</form>
 			<input type="checkbox" id="switch-mode" hidden>
@@ -120,10 +118,6 @@
 						</li>
 					</ul>
 				</div>
-				<a href="#" class="btn-download">
-					<i class='bx bxs-cloud-download' ></i>
-					<span class="text">Baixe um resumo - PDF</span>
-				</a>
 			</div>
 
 			<ul class="box-info">

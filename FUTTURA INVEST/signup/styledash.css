@@ -231,7 +231,7 @@ body {
 }
 #content nav form .form-input {
 	display: flex;
-	align-items: center;
+	align-items: auto;
 	height: 36px;
 }
 #content nav form .form-input input {
@@ -362,6 +362,7 @@ body {
 	align-items: center;
 	grid-gap: 10px;
 	font-weight: 500;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 

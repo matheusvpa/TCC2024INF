@@ -8,6 +8,9 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="styledash.css">
     <title>Futtura Invest - Seja bem-vindo aos seus investimentos.</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="baixepdf.js" defer></script>
 </head>
 <body>
     <section id="sidebar">
@@ -70,24 +73,22 @@
             <i class='bx bx-menu' ></i>
             <a href="#" class="nav-link">Menu</a>
             <form action="#">
-                <div class="form-input">
-                    <input type="search" placeholder="Pesquisar...">
-                    <button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
-                </div>
-            </form>
+				<div class="form-input">
+				</div>
+			</form>
             <input type="checkbox" id="switch-mode" hidden>
             <label for="switch-mode" class="switch-mode"></label>
             <a href="#" class="notification">
                 <i class='bx bxs-bell' ></i>
             </a>
             <a href="#" class="profile">
-                <img src="#">
+                <img src="../img/brunodill.png">
             </a>
         </nav>
         <!-- NAVBAR -->
 
         <!-- MAIN -->
-        <main>
+        <main id="contentpdf">
             <div class="head-title">
                 <div class="left">
                     <h1>Seus investimentos</h1>
@@ -101,10 +102,10 @@
                         </li>
                     </ul>
                 </div>
-                <a href="#" class="btn-download">
-                    <i class='bx bxs-cloud-download' ></i>
-                    <span class="text">Baixe um resumo - PDF</span>
-                </a>
+                    <a href="#" class="btn-download">
+                        <i class='bx bxs-cloud-download' ></i>
+                        <button><b>Baixe um resumo - PDF</b></button>
+                    </a>
             </div>
 
             <ul class="box-info">

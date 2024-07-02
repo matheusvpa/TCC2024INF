@@ -22,6 +22,7 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
 	<link rel="stylesheet" href="styledash.css">
+	<script src="viacep.js" defer></script>
 
 	<title>Futtura Invest - Seja bem-vindo aos seus investimentos.</title>
 </head>
@@ -80,8 +81,6 @@
 	</section>
 	<!-- SIDEBAR -->
 
-
-
 	<!-- CONTENT -->
 	<section id="content">
 		<!-- NAVBAR -->
@@ -90,8 +89,6 @@
 			<a href="#" class="nav-link">Menu</a>
 			<form action="#">
 				<div class="form-input">
-					<input type="search" placeholder="Pesquisar...">
-					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
 				</div>
 			</form>
 			<input type="checkbox" id="switch-mode" hidden>
@@ -113,51 +110,228 @@
 				</div>
 			</div>
 
-		<form action="atualizar_dados.php" method="POST">
+			<form action="atualizar_dados.php" method="POST">
 				<h3>Informações pessoais</h3>
 					<label for="nome_completo">Nome completo:</label>
-					<input type="text" id="nome_completo" name="nome_completo" required><br>
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					type="text" id="nome_completo" name="nome_completo" required><br>
 					
 					<label for="cpf">CPF:</label>
-					<input type="text" id="cpf" name="cpf" readonly value="123.456.789-00"><br>
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					type="text" id="cpf" name="cpf" readonly value="123.456.789-00"><br>
 
 					<label for="celular">Celular pessoal:</label>
-					<input type="telephone" id="celular" name="celular" required><br>
-
-				
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					type="telephone" id="celular" name="celular" required><br>
+			
 				<h3>Endereço</h3>
-					<label for="endereco">Endereço:</label>
-					<input type="text" id="endereco" name="endereco" required><br>
+					<form id="address-form">
+						<div class="row mb-3">						
+							<div class="form-floating">
+								<input
+								type="text"
+								class="form-control shadow-none"
+								id="cep"
+								name="cep"
+								placeholder="Digite o seu CEP (SOMENTE NÚMEROS)"
+								maxlength="8"
+								minlength="8"
+								required
+								style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 							
+								border-radius: 50px; 
+								height: 30px;" 
+					/>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+								<input
+								type="text"
+								class="form-control shadow-none"
+								id="address"
+								name="address"
+								placeholder="Rua"
+								disabled
+								required
+								data-input
+								style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					/>
+							</div>
+							<div class="col-12 col-sm-6 form-floating">
+								<input
+								type="text"
+								class="form-control shadow-none"
+								id="number"
+								name="number"
+								placeholder="Digite o número da residência"
+								disabled
+								required
+								data-input
+								style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					/>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+								<input
+								type="text"
+								class="form-control shadow-none"
+								id="complement"
+								name="complement"
+								placeholder="Digite o complemento"
+								disabled
+								data-input
+								style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					/>
+							</div>
+							<div class="col-12 col-sm-6 form-floating">
+								<input
+								type="text"
+								class="form-control shadow-none"
+								id="neighborhood"
+								name="neighborhood"
+								placeholder="Bairro"
+								disabled
+								required
+								data-input
+								style="width: 50%; 
+								margin: 5px;
+								padding: 5px;  
+								border-radius: 50px; 
+								height: 30px;" 
+					/>
+							</div>
+						</div>
+						<div class="row mb-3">
+							<div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+								<input
+								type="text"
+								class="form-control shadow-none"
+								id="city"
+								name="city"
+								placeholder="Cidade"
+								disabled
+								required
+								data-input
+								style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					/>
+							</div>
+							<div class="col-12 col-sm-6 mb-3">
+								<select
+								class="form-select shadow-none"
+								id="region"
+								disabled
+								required
+								data-input
+								style="width: 50%; 
+								margin: 5px;
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					>
+								<option selected>Estado</option>
+								<option value="AC">Acre</option>
+								<option value="AL">Alagoas</option>
+								<option value="AP">Amapá</option>
+								<option value="AM">Amazonas</option>
+								<option value="BA">Bahia</option>
+								<option value="CE">Ceará</option>
+								<option value="DF">Distrito Federal</option>
+								<option value="ES">Espírito Santo</option>
+								<option value="GO">Goiás</option>
+								<option value="MA">Maranhão</option>
+								<option value="MT">Mato Grosso</option>
+								<option value="MS">Mato Grosso do Sul</option>
+								<option value="MG">Minas Gerais</option>
+								<option value="PA">Pará</option>
+								<option value="PB">Paraíba</option>
+								<option value="PR">Paraná</option>
+								<option value="PE">Pernambuco</option>
+								<option value="PI">Piauí</option>
+								<option value="RJ">Rio de Janeiro</option>
+								<option value="RN">Rio Grande do Norte</option>
+								<option value="RS">Rio Grande do Sul</option>
+								<option value="RO">Rondônia</option>
+								<option value="RR">Roraima</option>
+								<option value="SC">Santa Catarina</option>
+								<option value="SP">São Paulo</option>
+								<option value="SE">Sergipe</option>
+								<option value="TO">Tocantins</option>
+								</select>
+							</div>
+						</div>
+					</form>
 
-					<label for="rua">Rua:</label>
-					<input type="text" id="rua" name="rua" required><br>
-
-					<label for="cep">CEP:</label>
-					<input type="text" id="cep" name="cep" required><br>
-
-					<label for="bairro">Bairro:</label>
-					<input type="text" id="bairro" name="bairro" required><br>
-
-					<label for="numero">Número:</label>
-					<input type="text" id="numero" name="numero" required><br>
-
-					<label for="complemento">Complemento:</label>
-					<input type="text" id="complemento" name="complemento"><br>
-				<h3>Endereço</h3>
+					<h3>Documentações</h3>
 					<label for="tipo_documento">Tipo de documento:</label>
-					<input type="text" id="tipo_documento" name="tipo_documento" required><br>
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					type="text" id="tipo_documento" name="tipo_documento" required><br>
 
 					<label for="orgao_emissor">Orgão emissor:</label>
-					<input type="text" id="orgao_emissor" name="orgao_emissor" required><br>
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					type="text" id="orgao_emissor" name="orgao_emissor" required><br>
 
 					<label for="numero_documento">Número do documento:</label>
-					<input type="text" id="numero_documento" name="numero_documento" required><br>
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					type="text" id="numero_documento" name="numero_documento" required><br>
 
 					<label for="data_emissao">Data de emissão:</label>
-					<input type="date" id="data_emissao" name="data_emissao" required><br>
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					type="date" id="data_emissao" name="data_emissao" required><br>
 
 					<label for="estado_emitente">Estado emitente:</label>
-					<select id="estado_emitente" name="estado_emitente" required>
+					<select style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					id="estado_emitente" name="estado_emitente" required>
 						<option selected disabled>Selecione o estado</option>
 						<option value="AC">Acre</option>
 						<option value="AL">Alagoas</option>
@@ -191,72 +365,210 @@
 					
 				<h3>Documentações</h3>
 					<label for="sexo">Sexo:</label>
-					<input type="text" id="sexo" name="sexo" required><br>
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					type="text" id="sexo" name="sexo" required><br>
 
 					<label for="nacionalidade">Nacionalidade:</label>
-					<input type="text" id="nacionalidade" name="nacionalidade" required><br>
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					type="text" id="nacionalidade" name="nacionalidade" required><br>
 
 					<label for="estado_nascimento">Estado que nasceu:</label>
-					<input type="text" id="estado_nascimento" name="estado_nascimento" required><br>
-
+					<select style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 50px; 
+								height: 30px;" 
+					id="estado_nascimento" name="estado_nascimento" required>
+						<option selected disabled>Selecione o estado</option>
+						<option value="AC">Acre</option>
+						<option value="AL">Alagoas</option>
+						<option value="AP">Amapá</option>
+						<option value="AM">Amazonas</option>
+						<option value="BA">Bahia</option>
+						<option value="CE">Ceará</option>
+						<option value="DF">Distrito Federal</option>
+						<option value="ES">Espírito Santo</option>
+						<option value="GO">Goiás</option>
+						<option value="MA">Maranhão</option>
+						<option value="MT">Mato Grosso</option>
+						<option value="MS">Mato Grosso do Sul</option>
+						<option value="MG">Minas Gerais</option>
+						<option value="PA">Pará</option>
+						<option value="PB">Paraíba</option>
+						<option value="PR">Paraná</option>
+						<option value="PE">Pernambuco</option>
+						<option value="PI">Piauí</option>
+						<option value="RJ">Rio de Janeiro</option>
+						<option value="RN">Rio Grande do Norte</option>
+						<option value="RS">Rio Grande do Sul</option>
+						<option value="RO">Rondônia</option>
+						<option value="RR">Roraima</option>
+						<option value="SC">Santa Catarina</option>
+						<option value="SP">São Paulo</option>
+						<option value="SE">Sergipe</option>
+						<option value="TO">Tocantins</option>
+					</select>
+					<br>
 					<label for="naturalidade">Naturalidade:</label>
-					<input type="text" id="naturalidade" name="naturalidade" required><br>
+					<input style="width: 20%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="naturalidade" name="naturalidade" required><br>
 
 					<label for="nome_mae">Nome da mãe:</label>
-					<input type="text" id="nome_mae" name="nome_mae" required><br>
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="nome_mae" name="nome_mae" required><br>
 
 					<label for="nome_pai">Nome do pai:</label>
-					<input type="text" id="nome_pai" name="nome_pai"><br>
+					<input style="width: 50%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="nome_pai" name="nome_pai"><br>
 
 					<label for="estado_civil">Estado civil:</label>
-					<input type="text" id="estado_civil" name="estado_civil" required><br>
+					<input style="width: 10%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="estado_civil" name="estado_civil" required><br>
 
 				<h3>Ocupação profissional</h3>
 					<label for="ocupacao">Ocupação profissional:</label>
-					<input type="text" id="ocupacao" name="ocupacao" required><br>
+					<input style="width: 10%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"type="text" id="ocupacao" name="ocupacao" required><br>
 				
 				<h3>Rendimentos mensais</h3>
 					<label for="rendimentos_mensais">Rendimentos mensais:</label>
-					<input type="text" id="rendimentos_mensais" name="rendimentos_mensais" required><br>
+					<input style="width: 10%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="rendimentos_mensais" placeholder="R$" name="rendimentos_mensais" required><br>
 
 					<label for="bens_imoveis">Total em Bens Imóveis:</label>
-					<input type="text" id="bens_imoveis" name="bens_imoveis"><br>
+					<input style="width: 10%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="bens_imoveis" placeholder="R$" name="bens_imoveis"><br>
 
 					<label for="bens_moveis">Total de Bens Móveis:</label>
-					<input type="text" id="bens_moveis" name="bens_moveis"><br>
+					<input style="width: 10%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="bens_moveis" placeholder="R$ " name="bens_moveis"><br>
 
 					<label for="outros_bens">Total de Outros Bens:</label>
-					<input type="text" id="outros_bens" name="outros_bens"><br>
+					<input style="width: 15%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="outros_bens" placeholder="R$ "  name="outros_bens"><br>
 
-					<label for="vinculo_futtura">Pessoa vinculada a Futtura Invest?</label>
-					<input type="text" id="vinculo_futtura" name="vinculo_futtura"><br>
+					<label for="vinculo_futtura">Pessoa vinculada a Futtura Invest?</label> 
+					<select style="width: 15%; 
+								margin: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					id="vinculo_futtura" name="vincula_futtura" required> 
+						<option selected disabled>Selecione a opção</option>
+						<option value="Sim">Sim</option>
+						<option value="Não">Não</option>
+						<option value="Talvez">Já fui, atualmente não tenho mais vinculo.</option>
+					</select>
+					<br>
 
-					<label for="politicamente_exposta">Sou pessoa politicamente exposta?</label>
-					<input type="text" id="politicamente_exposta" name="politicamente_exposta"><br>
-
+					<label for="politicamente_exposta">Sou pessoa politicamente exposta?</label> 
+					<select style="width: 15%; 
+								margin: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					id="politicamente_exposta" name="politicamente_exposta" required>
+						<option selected disabled>Selecione a opção</option> 
+						<option value="Sim">Sim</option>
+						<option value="Nao">Não</option>
+					</select>
+					<br>
 					<label for="cidadania_americana">Cidadania americana?</label>
-					<input type="text" id="cidadania_americana" name="cidadania_americana"><br>
+					<select style="width: 15%; 
+								margin: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					id="cidadania_americana" name="cidadania_americana" required> 
+						<option selected disabled>Selecione a opção</option>
+						<option value="Sim">Sim</option>
+						<option value="Nao">Não</option>
+					</select>
 
 				<h3>Financeiro</h3>
 					<label for="tipo_conta">Tipo da conta bancária:</label>
-					<input type="text" id="tipo_conta" name="tipo_conta" required><br>
-
+					<select style="width: 15%; 
+								margin: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					id="tipo_conta" name="tipo_conta" required> 
+						<option selected disabled>Selecione a opção</option>
+						<option value="Conta Corrente">Conta Corrente</option>
+						<option value="Conta Poupança">Conta Poupança</option>
+					</select>
+					<br>
 					<label for="banco">Banco:</label>
-					<input type="text" id="banco" name="banco" required><br>
+					<input style="width: 10%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="banco" name="banco" required><br>
 
 					<label for="agencia">Agência:</label>
-					<input type="text" id="agencia" name="agencia" required><br>
+					<input style="width: 15%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="agencia" name="agencia" required><br>
 
 					<label for="conta">Conta:</label>
-					<input type="text" id="conta" name="conta" required><br>
+					<input style="width: 15%; 
+								margin: 5px; 
+								padding: 5px; 
+								border-radius: 10px; 
+								height: 30px;"
+					type="text" id="conta" name="conta" required><br>
 				
 				<br>
 			
 				<a href="#">
 					<span type="submit" class="botao-atualizar">Atualizar informações</span>
 				</a>
-		</form>
-
+			
+			</form>
+		</main>
 	<script src="script.js"></script>
 </body>
 </html>
