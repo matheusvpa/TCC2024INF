@@ -22,7 +22,7 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
 	<link rel="stylesheet" href="styledash.css">
-	<script src="viacep.js" defer></script>
+	<script src="config.js" defer></script>
 
 	<title>Futtura Invest - Seja bem-vindo aos seus investimentos.</title>
 </head>
@@ -91,8 +91,6 @@
 				<div class="form-input">
 				</div>
 			</form>
-			<input type="checkbox" id="switch-mode" hidden>
-			<label for="switch-mode" class="switch-mode"></label>
 			<a href="#" class="notification">
 				<i class='bx bxs-bell' ></i>
 			</a>
@@ -136,29 +134,39 @@
 								height: 30px;" 
 					type="telephone" id="celular" name="celular" required><br>
 			
-				<h3>Endereço</h3>
+				<h3>Endereço</h3>			
 					<form id="address-form">
-						<div class="row mb-3">						
+						<div class="row mb-3">					
 							<div class="form-floating">
-								<input
+							<span>Digite seu CEP - SOMENTE NÚMEROS: </span>	
+								<input								
 								type="text"
 								class="form-control shadow-none"
 								id="cep"
 								name="cep"
-								placeholder="Digite o seu CEP (SOMENTE NÚMEROS)"
+								placeholder="SOMENTE NÚMEROS"
 								maxlength="8"
 								minlength="8"
 								required
-								style="width: 50%; 
+								style="width: 15%; 
 								margin: 5px; 
 								padding: 5px; 							
 								border-radius: 50px; 
-								height: 30px;" 
+								height: 30px;"
 					/>
+					<button type="button" id="buscarCep" style="margin: 15px; 
+														padding: 5px;														
+														border-radius: 30px; 
+														height: 30px;
+														background-color: green;
+														color: white;">
+														Procurar CEP
+													</button>
 							</div>
 						</div>
 						<div class="row mb-3">
 							<div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+							<span>Rua: </span>	
 								<input
 								type="text"
 								class="form-control shadow-none"
@@ -176,6 +184,7 @@
 					/>
 							</div>
 							<div class="col-12 col-sm-6 form-floating">
+							<span>Digite o número da residência: </span>	
 								<input
 								type="text"
 								class="form-control shadow-none"
@@ -195,6 +204,7 @@
 						</div>
 						<div class="row mb-3">
 							<div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+							<span>Digite um complemento: </span>	
 								<input
 								type="text"
 								class="form-control shadow-none"
@@ -211,6 +221,7 @@
 					/>
 							</div>
 							<div class="col-12 col-sm-6 form-floating">
+							<span>Bairro: </span>	
 								<input
 								type="text"
 								class="form-control shadow-none"
@@ -230,6 +241,7 @@
 						</div>
 						<div class="row mb-3">
 							<div class="col-12 col-sm-6 mb-3 mb-md-0 form-floating">
+							<span>Cidade: </span>	
 								<input
 								type="text"
 								class="form-control shadow-none"
@@ -247,6 +259,7 @@
 					/>
 							</div>
 							<div class="col-12 col-sm-6 mb-3">
+							<span>Estado: </span>	
 								<select
 								class="form-select shadow-none"
 								id="region"
@@ -569,6 +582,5 @@
 			
 			</form>
 		</main>
-	<script src="script.js"></script>
 </body>
 </html>
