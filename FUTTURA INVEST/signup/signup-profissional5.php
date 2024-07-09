@@ -1,3 +1,20 @@
+<?php
+
+if(isset($_POST['submit'])){
+
+    include_once('conect.php');
+
+    $ocup_profissional = $_POST['occupation'];
+    $inst_trabalho = $_POST['work-institution'];
+    $cnpj = $_POST['cnpj'];
+
+    $resulta = mysqli_query($conexao, "INSERT INTO profissional(ocup_profissional, inst_trabalho, cnpj) VALUES('$ocup_profissional','$inst_trabalho','$cnpj')");
+
+    header("location: signup-rendimentos6.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +55,7 @@
         <h2>Cadastre suas informações profissionais</h2>
         <p>Preencha os campos abaixo</p>
     </div>
-    <form id="professional-info-form">
+    <form id="professional-info-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div class="row mb-3">
             <div class="col-12 col-md-6 form-floating">
                 <select class="form-select shadow-none" id="occupation" name="occupation" required>
@@ -86,7 +103,7 @@
         </div>
         <!-- Aqui seria o botão de cadastrado para passar para a próxima página -->
         <div class="d-flex justify-content-end">
-            <button id="save-btn" type="submit" class="btn btn-primary">
+            <button id="save-btn" name="submit" type="submit" class="btn btn-primary">
                 Cadastrar
             </button>
         </div>

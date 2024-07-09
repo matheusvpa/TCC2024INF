@@ -1,3 +1,23 @@
+<?php
+
+if(isset($_POST['submit'])){
+
+    include_once('conect.php');
+
+    $tipo_doc = $_POST['document-type'];
+    $orgao_emissor = $_POST['issuing-authority'];
+    $num_doc = $_POST['document-number'];
+    $cpf = $_POST['cpf-number'];
+    $data_emi = $_POST['issue-date'];
+    $est_emissor = $_POST['issuing-state'];
+
+    $result = mysqli_query($conexao, "INSERT INTO documentos(tipo_doc, orgao_emissor, num_doc, cpf, data_emi, est_emissor) VALUES('$tipo_doc','$orgao_emissor','$num_doc','$cpf','$data_emi','$est_emissor')");
+
+    header("location: signup-infopessoal4.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +58,7 @@
         <h2>Cadastre o seu documento</h2>
         <p>Preencha os campos abaixo</p>
     </div>
-    <form id="document-form">
+    <form id="document-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div class="row mb-3">
             <div class="col-12 col-md-6 form-floating">
                 <select class="form-select shadow-none" id="document-type" name="document-type" required>
@@ -82,7 +102,7 @@
         </div>
         <!-- Aqui seria o botão de cadastrado para passar para a próxima página -->
         <div class="d-flex justify-content-end">
-            <button id="save-btn" type="submit" class="btn btn-primary">
+            <button id="save-btn" name='submit' type="submit" class="btn btn-primary">
                 Cadastrar
             </button>
         </div>

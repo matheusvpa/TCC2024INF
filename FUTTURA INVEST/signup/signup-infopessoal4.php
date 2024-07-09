@@ -1,3 +1,23 @@
+<?php
+
+if(isset($_POST['submit'])){
+
+    include_once('conect.php');
+
+    $genero = $_POST['gender'];
+    $nacionalidade = $_POST['nationality'];
+    $estad_nasc = $_POST['birth-state'];
+    $naturalidade = $_POST['birthplace'];
+    $n_mae = $_POST['mother-name'];
+    $n_pai = $_POST['father-name'];
+    $est_civil = $_POST['marital-status'];
+
+    $resulta = mysqli_query($conexao, "INSERT INTO info_pessoal(genero, nacionalidade, estad_nasc, naturalidade, n_mae, n_pai, est_civil) VALUES('$genero','$nacionalidade','$estad_nasc','$naturalidade','$n_mae','$n_pai','$est_civil')");
+
+    header("location: signup-profissional5.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +58,7 @@
         <h2>Cadastre seus dados pessoais</h2>
         <p>Preencha os campos abaixo</p>
     </div>
-    <form id="personal-info-form">
+    <form id="personal-info-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div class="row mb-3">
             <div class="col-12 col-md-6 form-floating">
                 <select class="form-select shadow-none" id="gender" name="gender" required>
@@ -95,7 +115,7 @@
         </div>
         <!-- Aqui seria o botão de cadastrado para passar para a próxima página -->
         <div class="d-flex justify-content-end">
-            <button id="save-btn" type="submit" class="btn btn-primary">
+            <button id="save-btn" name="submit"type="submit" class="btn btn-primary">
                 Cadastrar
             </button>
         </div>

@@ -13,7 +13,7 @@
        // print_r('Senha: ' . $senha);
 
         //verifica se existe algum cpf e senha na tabela
-        $sql = "SELECT * FROM tabela WHERE cpf = '$cpf' and senha = '$senha'";
+        $sql = "SELECT * FROM loging WHERE cpf = '$cpf' and senha = '$senha'";
 
         $result = $conexao->query($sql);
         //print_r($sql);

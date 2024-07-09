@@ -1,3 +1,26 @@
+<?php
+
+if(isset($_POST['submit'])){
+
+    include_once('conect.php');
+
+    $rendimento_mensal = $_POST['monthly-income'];
+    $bem_imovel = $_POST['real-estate-assets'];
+    $bem_movel = $_POST['movable-assets'];
+    $outro_bem = $_POST['other-assets'];
+    $vinculada_FT = $_POST['futtura-linked'];
+    $pessoa_politica = $_POST['politically-exposed'];
+    $cid_americana = $_POST['us-citizenship'];
+
+    $result = mysqli_query($conexao, "INSERT INTO rendimentos(rendimento_mensal, bem_imóvel, bem_móvel, outro_bem, vinculada_FT, pessoa_politica, cid_americana) 
+                                    VALUES('$rendimento_mensal','$bem_imovel','$bem_movel','$outro_bem','$vinculada_FT','$pessoa_politica','$cid_americana')");
+
+    header("location: signup-contaBancaria7.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +61,7 @@
         <h2>Cadastre seus dados financeiros</h2>
         <p>Preencha os campos abaixo</p>
     </div>
-    <form id="financial-info-form">
+    <form id="financial-info-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div class="row mb-3">
             <div class="col-12 col-md-6 form-floating">
                 <input type="text" class="form-control shadow-none" id="monthly-income" name="monthly-income"
@@ -90,7 +113,7 @@
                   </div>
                   <!-- Aqui seria o botão de cadastrado para passar para a próxima página -->
                   <div class="d-flex justify-content-end">
-                  <button id="save-btn" type="submit" class="btn btn-primary">
+                  <button id="save-btn" name="submit" type="submit" class="btn btn-primary">
                     Cadastrar
                   </button>
             </div>                  

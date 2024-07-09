@@ -9,9 +9,9 @@ if(isset($_POST['submit'])){
     $email = $_POST['issue-email'];
     $senha = $_POST['password'];
 
-    $result = mysqli_query($conexao, "INSERT INTO tabela(nome, cpf, email, senha) VALUES('$nome','$cpf','$email','$senha')");
+    $result = mysqli_query($conexao, "INSERT INTO loging(nome, cpf, email, senha) VALUES('$nome','$cpf','$email','$senha')");
 
-    header("location: signin.php");
+    header("location: signup-documentacao3.php");
 }
 
 ?>

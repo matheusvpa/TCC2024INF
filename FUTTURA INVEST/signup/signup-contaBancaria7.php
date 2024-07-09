@@ -1,3 +1,22 @@
+<?php
+
+if(isset($_POST['submit'])){
+
+    include_once('conect.php');
+
+    $tipo = $_POST['bank-account-type'];
+    $banco = $_POST['bank'];
+    $agencia = $_POST['agency'];
+    $conta = $_POST['account'];
+
+    $resulta = mysqli_query($conexao, "INSERT INTO conta_bancaria(tipo, banco, agencia, conta) VALUES('$tipo','$banco','$agencia','$conta')");
+
+    header("location: signin.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +57,7 @@
         <h2>Cadastre seus dados financeiros</h2>
         <p>Preencha os campos abaixo</p>
     </div>
-    <form id="financial-info-form">
+    <form id="financial-info-form" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div class="row mb-3">
             <div class="col-12 col-md-6 form-floating">
                 <select class="form-select shadow-none" id="bank-account-type" name="bank-account-type" required>
@@ -69,7 +88,7 @@
         </div>
         <!-- Aqui seria o botão de cadastrado para passar para a próxima página -->
         <div class="d-flex justify-content-end">
-            <button id="save-btn" type="submit" class="btn btn-primary">
+            <button id="save-btn" name="submit" type="submit" class="btn btn-primary">
                 Cadastrar
             </button>
         </div>
