@@ -1,8 +1,7 @@
 <?php
-
     $dbHost = 'Localhost';
     $dbUsername = 'root';
-    $dbPassword = '030207';
+    $dbPassword = 'root';
     $dbName = 'tabela_tcc';
     
     $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);

@@ -88,15 +88,15 @@ if(isset($_POST['submit'])){
         </div>
         <div class="row mb-3">
             <div class="col-12 col-md-6">
-                <label for="futtura-linked" class="form-label">Pessoa vinculada a Futtura Invest?</label>
                 <select class="form-select" id="futtura-linked" name="futtura-linked">
+                    <option selected disabled>Pessoa vinculada a Futtura Invest?</option>
                     <option value="sim">Sim</option>
                     <option value="nao">Não</option>
                 </select>
             </div>
             <div class="col-12 col-md-6">
-                <label for="politically-exposed" class="form-label">Sou pessoa politicamente exposta?</label>
                 <select class="form-select" id="politically-exposed" name="politically-exposed">
+                    <option selected disabled>Sou pessoa politicamente exposta?</option>
                     <option value="sim">Sim</option>
                     <option value="nao">Não</option>
                 </select>
@@ -104,8 +104,8 @@ if(isset($_POST['submit'])){
         </div>
         <div class="row mb-3">
             <div class="col-12 col-md-6">
-                <label for="us-citizenship" class="form-label">Cidadania americana?</label>
                 <select class="form-select" id="us-citizenship" name="us-citizenship">
+                    <option selected disabled>Cidadania americana?</option>
                   <option value="sim">Sim</option>
                   <option value="nao">Não</option>
                 </select>

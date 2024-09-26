@@ -68,7 +68,6 @@ if(isset($_POST['submit'])){
                     <option value="Passaporte">Passaporte</option>
                     <!-- Adicione outros tipos de documento conforme necessário -->
                 </select>
-                <label for="document-type">Tipo de Documento</label>
             </div>
             <div class="col-12 col-md-6 form-floating">
                 <input type="text" class="form-control shadow-none" id="issuing-authority" name="issuing-authority"
