@@ -66,6 +66,7 @@ if(isset($_POST['submit'])){
                     <option value="poupanca">Poupança</option>
                     <!-- Adicione outros tipos conforme necessário -->
                 </select>
+                <label for="bank-account-type">Tipo da Conta Bancária</label>
             </div>
             <div class="col-12 col-md-6 form-floating">
                 <input type="text" class="form-control shadow-none" id="bank" name="bank"

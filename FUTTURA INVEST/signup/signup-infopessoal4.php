@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Pessoa</title>
-    <link rel="stylesheet" href="css/formulario.css" />
+    <link rel="stylesheet" href="formulario.css" />
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -68,6 +68,7 @@ if(isset($_POST['submit'])){
                     <option value="Outro">Outro</option>
                     <!-- Adicione outras opções de gênero conforme necessário -->
                 </select>
+                <label for="gender">Gênero</label>
             </div>
             <div class="col-12 col-md-6 form-floating">
                 <input type="text" class="form-control shadow-none" id="nationality" name="nationality"
@@ -109,6 +110,7 @@ if(isset($_POST['submit'])){
                     <option value="Viúvo(a)">Viúvo(a)</option>
                     <!-- Adicione outros estados civis conforme necessário -->
                 </select>
+                <label for="marital-status">Estado Civil</label>
             </div>
         </div>
         <!-- Aqui seria o botão de cadastrado para passar para a próxima página -->

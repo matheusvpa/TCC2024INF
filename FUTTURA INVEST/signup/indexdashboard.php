@@ -21,7 +21,7 @@
 	<!-- Boxicons -->
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 	<!-- My CSS -->
-	<link rel="stylesheet" href="css/styledash.css">
+	<link rel="stylesheet" href="styledash.css">
 
 	<title>Futtura Invest - Seja bem-vindo aos seus investimentos.</title>
 </head>
@@ -237,6 +237,6 @@
 	<!-- CONTENT -->
 	
 
-	<script src="js/script.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>
