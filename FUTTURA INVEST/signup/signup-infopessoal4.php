@@ -68,7 +68,6 @@ if(isset($_POST['submit'])){
                     <option value="Outro">Outro</option>
                     <!-- Adicione outras opções de gênero conforme necessário -->
                 </select>
-                <label for="gender">Gênero</label>
             </div>
             <div class="col-12 col-md-6 form-floating">
                 <input type="text" class="form-control shadow-none" id="nationality" name="nationality"
@@ -110,7 +109,6 @@ if(isset($_POST['submit'])){
                     <option value="Viúvo(a)">Viúvo(a)</option>
                     <!-- Adicione outros estados civis conforme necessário -->
                 </select>
-                <label for="marital-status">Estado Civil</label>
             </div>
         </div>
         <!-- Aqui seria o botão de cadastrado para passar para a próxima página -->

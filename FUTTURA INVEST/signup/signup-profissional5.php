@@ -86,7 +86,6 @@ if(isset($_POST['submit'])){
                     <option value="Outros">Outros</option>
                     <!-- Adicione outras profissões conforme necessário -->
                 </select>
-                <label for="occupation">Ocupação Profissional</label>
             </div>
             <div class="col-12 col-md-6 form-floating">
                 <input type="text" class="form-control shadow-none" id="work-institution" name="work-institution"

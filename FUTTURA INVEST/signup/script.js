@@ -27,12 +27,17 @@ function applyTheme() {
     if (localStorage.getItem('darkMode') === 'enabled') {
         document.body.classList.add('dark');
         switchMode.checked = true;
-        themeImage.src = localStorage.getItem('logoSrc') || '../img/LogotipoFundoBranco.png'; // Logo para o tema dark
+        themeImage.src = localStorage.getItem('logoSrc') || ''; // Logo para o tema dark
     } else {
         document.body.classList.remove('dark');
         switchMode.checked = false;
-        themeImage.src = localStorage.getItem('logoSrc') || '../img/LogotipoFuttura.png'; // Logo para o tema light
+        themeImage.src = localStorage.getItem('logoSrc') || '../img/LogotipoFutturaTransparente.png'; // Logo para o tema light
     }
+
+    // Adiciona um evento de carregamento à imagem para atualizar sua exibição
+    themeImage.addEventListener('load', function() {
+        // Após o carregamento, o logo estará visível corretamente
+    });
 }
 
 // Aplicar tema ao carregar a página
@@ -44,17 +49,21 @@ switchMode.addEventListener('change', function () {
         document.body.classList.add('dark');
         themeImage.src = '../img/LogotipoFundoBranco.png'; // Alterando a imagem para o tema dark
         localStorage.setItem('darkMode', 'enabled');
-        localStorage.setItem('logoSrc', '../img/LogotipoFundoBranco.png'); // Salvar logo correspondente ao tema dark
+        localStorage.setItem('logoSrc', '../img/LogotipoFuttura.png '); // Salvar logo correspondente ao tema dark
     } else {
         document.body.classList.remove('dark');
-        themeImage.src = '../img/LogotipoFuttura.png'; // Alterando a imagem para o tema light
+        themeImage.src = '../img/LogotipoFutturaTransparente.png'; // Alterando a imagem para o tema light
         localStorage.setItem('darkMode', 'disabled');
-        localStorage.setItem('logoSrc', '../img/LogotipoFuttura.png'); // Salvar logo correspondente ao tema light
+        localStorage.setItem('logoSrc', '../img/LogotipoFutturaTransparente.png'); // Salvar logo correspondente ao tema light
     }
+
+    // Adiciona evento de carregamento para a imagem alterada
+    themeImage.addEventListener('load', function() {
+        // Após o carregamento, o logo estará visível corretamente
+    });
 });
 
 // Atualizar logo no localStorage ao carregar a página
 window.addEventListener('load', function () {
     applyTheme();
 });
-
