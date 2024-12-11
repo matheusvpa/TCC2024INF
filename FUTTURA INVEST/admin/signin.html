@@ -30,7 +30,7 @@ body {
   background-color: whitesmoke;
   padding: 6px;
   width: 350px;
-  height: 700px;
+  height: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,10 +42,10 @@ body {
 
 form {
   position: absolute;
-  margin-top: 70px;
+  margin-top: 20%;
   transition: .5s;
   width: 300px;
-  height: 400px;
+  height: 200px;
 }
 
 .buttonsForm {
@@ -128,41 +128,29 @@ button[type="submit"] {
 <body>
 <header>
   <a href="signin.php">
-    <img src="../img/LogotipoFutturaTransparente.png" alt="Logo da sua empresa" style="padding-top: 10px; max-width: 30%; margin-left: 15%;">
+    <img src="../img/Futtura.png" alt="Logo da sua empresa" style="padding-top: 10px; max-width: 30%; margin-left: 15%;">
   </a>
 </header>
     
-<div class="container">
-  <div class="buttonsForm">
-    <div class="btnColor"></div>
-    <button id="btnSignup">Acesse sua conta</button>
+  <div class="container">
+    <div class="buttonsForm">
+      <div class="btnColor"></div>
+      <button id="btnSignup">Painel do Administrador</button>
+    </div>
+
+  <!--  <form action="sistema.html" id="signin" method="POST">-->
+    <form>
+      <br>    
+      <h3>Insira sua credenciais de administrador</h3>
+      <input type="text" name="user" id="user" placeholder="Usuário" maxlength="30" autocomplete="off" required">
+      
+      <input type="password" name="senha" placeholder="Senha" required>
+      <br><br>
+      
+    <!-- <button href="sistema.html" class="botaosubmit" name="submit" type="submit">Acessar minha conta</button> -->
+    <button class="botaosubmit" onclick="sistema.html">Ir para Sistema</button>
+
+    </form>
   </div>
-
-  <form action="login.php" id="signin" method="POST">
-    <br>    
-    <h3>Insira seus dados e acesse sua conta!</h3>
-    <br>
-    <input type="text" name="cpf" id="cpf" placeholder="CPF no formato: xxx.xxx.xxx-xx" maxlength="14" autocomplete="off" required oninput="formatarCPF(this)">
-    
-    <input type="password" name="senha" placeholder="Senha" required>
-    <br><br>
-    
-    <button class="botaosubmit" name="submit" type="submit">Acessar minha conta</button>
-        
-    <a style="margin: 10px;" href="signup-inicio1.php">
-      <h6>Não tem conta ainda?</h6>
-    </a>
-  </form>
-</div>
-
-<script>
-function formatarCPF(campo) {
-  campo.value = campo.value.replace(/\D/g, ''); // Remove tudo que não é dígito
-  campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o ponto após o terceiro dígito
-  campo.value = campo.value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca o segundo ponto após o sexto dígito
-  campo.value = campo.value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca o hífen antes dos dois últimos dígitos
-}
-</script>
-
 </body>
 </html>
