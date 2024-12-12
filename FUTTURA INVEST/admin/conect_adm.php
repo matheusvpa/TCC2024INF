@@ -3,7 +3,7 @@
     $dbHost = 'Localhost';
     $dbUsername = 'root';
     $dbPassword = '030207';
-    $dbName = 'formulario-admin';
+    $dbName = 'tabela_tcc';
     
     $conex = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
 

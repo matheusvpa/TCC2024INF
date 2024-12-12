@@ -2,5 +2,5 @@
     session_start();
     unset($_SESSION['cpf']);
     unset($_SESSION['senha']);
-    header("Location: signin.html");
+    header("Location: inicial.html");
 ?>

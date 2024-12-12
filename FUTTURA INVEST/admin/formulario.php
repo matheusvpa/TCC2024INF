@@ -153,7 +153,7 @@
                     <label for="endereco" class="labelInput">Endereço</label>
                 </div>
                 <br><br>
-                <input type="submit" name="submit" id="submit">
+                <input type="submit" name="update" id="submit">
             </fieldset>
         </form>
     </div>

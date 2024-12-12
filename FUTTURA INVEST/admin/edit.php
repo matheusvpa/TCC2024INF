@@ -1,16 +1,45 @@
+<?php
 
+include_once('conect_adm.php');
+
+  if(!empty($_GET['id'])){
+
+    $id = $_GET['id'];
+    $sqlSelect = "SELECT * FROM loging WHERE id=$id";
+    $result = $conex->query($sqlSelect);
+
+    if($result->num_rows > 0){
+
+      while($user_data = mysqli_fetch_assoc($result)){
+
+        $nome = $user_data['nome'];
+        $cpf = $user_data['cpf'];
+        $email = $user_data['email'];
+        $senha = $user_data['senha'];
+      }
+    }
+
+    else{
+
+      header('Location: sistema.php');
+
+    }
+
+  }
+
+?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel de Administrador</title>
+    <title>Formulário FUTTURA INVEST</title>
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(to right, rgb(20, 147, 220), #052AA6);
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
         }
         .box{
             color: white;
@@ -67,7 +96,7 @@
             font-size: 15px;
         }
         #submit{
-            background-color: #000;
+            background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
             width: 100%;
             border: none;
             padding: 15px;
@@ -84,59 +113,30 @@
 <body>
     <a href="sistema.php">Voltar</a>
     <div class="box">
-        <form action="sistema.html" method="POST"> <!-- Mudar o sistema.html para o arquivo php -->
+        <form action="saveEdit.php" method="POST">
             <fieldset>
-                <legend><b>Editar Cliente</b></legend>
+                <legend><b>Gerenciar Informações</b></legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <input type="text" name="nome" id="nome" class="inputUser" value=<?php echo $nome;?> required>
                     <label for="nome" class="labelInput">Nome completo</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="senha" id="senha" class="inputUser" required>
-                    <label for="senha" class="labelInput">Senha</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <input type="text" name="email" id="email" class="inputUser" value=<?php echo $email;?> required>
                     <label for="email" class="labelInput">Email</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="tel" name="telefone" id="telefone" class="inputUser" required>
-                    <label for="telefone" class="labelInput">Telefone</label>
-                </div>
-                <p>Sexo:</p>
-                <input type="radio" id="feminino" name="genero" value="feminino" required>
-                <label for="feminino">Feminino</label>
-                <br>
-                <input type="radio" id="masculino" name="genero" value="masculino" required>
-                <label for="masculino">Masculino</label>
-                <br>
-                <input type="radio" id="outro" name="genero" value="outro" required>
-                <label for="outro">Outro</label>
-                <br><br>
-                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
-                <input type="date" name="data_nascimento" id="data_nascimento" required>
-                <br><br><br>
-                <div class="inputBox">
-                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                    <label for="cidade" class="labelInput">Cidade</label>
+                    <input type="tel" name="cpf" id="cpf" class="inputUser" value=<?php echo $cpf;?> required>
+                    <label for="cpf" class="labelInput">CPF</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="estado" id="estado" class="inputUser" required>
-                    <label for="estado" class="labelInput">Estado</label>
+                    <input type="password" name="senha" id="senha" class="inputUser" value=<?php echo $senha;?> required>
+                    <label for="senha" class="labelInput">Senha</label>
                 </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                    <label for="endereco" class="labelInput">Endereço</label>
-                </div>
-                <br><br>
-				<input type="hidden" name="id">
-                <input type="submit" name="update" id="submit">
+                <input type="submit" name="submit" id="submit">
             </fieldset>
         </form>
     </div>

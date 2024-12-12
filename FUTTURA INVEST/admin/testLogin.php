@@ -16,18 +16,18 @@
         {
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
-            header('Location: sistema.html');
+            header('Location: sistema.php');
         }
         else
         {
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
-            header('Location: signin.php');
+            header('Location: sistema.php');
         }
     }
     else
     {
         // Não acessa
-        header('Location: signin.php');
+        header('Location: sistema.php');
     }
 ?>
