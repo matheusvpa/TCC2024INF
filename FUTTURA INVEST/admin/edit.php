@@ -5,7 +5,7 @@ include_once('conect_adm.php');
   if(!empty($_GET['id'])){
 
     $id = $_GET['id'];
-    $sqlSelect = "SELECT * FROM loging WHERE id=$id";
+    $sqlSelect = "SELECT * FROM loging WHERE id='$id'";
     $result = $conex->query($sqlSelect);
 
     if($result->num_rows > 0){
@@ -95,7 +95,7 @@ include_once('conect_adm.php');
             outline: none;
             font-size: 15px;
         }
-        #submit{
+        #update{
             background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
             width: 100%;
             border: none;
@@ -105,7 +105,7 @@ include_once('conect_adm.php');
             cursor: pointer;
             border-radius: 10px;
         }
-        #submit:hover{
+        #update:hover{
             background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
         }
     </style>
@@ -118,25 +118,26 @@ include_once('conect_adm.php');
                 <legend><b>Gerenciar Informações</b></legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" value=<?php echo $nome;?> required>
+                    <input type="text" name="nome" id="nome" class="inputUser" value="<?php echo $nome?>" required>
                     <label for="nome" class="labelInput">Nome completo</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" value=<?php echo $email;?> required>
+                    <input type="text" name="email" id="email" class="inputUser" value="<?php echo $email?>" required>
                     <label for="email" class="labelInput">Email</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="tel" name="cpf" id="cpf" class="inputUser" value=<?php echo $cpf;?> required>
+                    <input type="tel" name="cpf" id="cpf" class="inputUser" value="<?php echo $cpf?>" required>
                     <label for="cpf" class="labelInput">CPF</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="password" name="senha" id="senha" class="inputUser" value=<?php echo $senha;?> required>
+                    <input type="text" name="senha" id="senha" class="inputUser" value="<?php echo $senha?>" required>
                     <label for="senha" class="labelInput">Senha</label>
                 </div>
-                <input type="submit" name="submit" id="submit">
+                <input type="hidden" name='id' value="<?php echo $id?>">
+                <input type="submit" name="update" id="update">
             </fieldset>
         </form>
     </div>

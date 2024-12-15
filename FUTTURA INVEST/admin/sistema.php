@@ -10,9 +10,16 @@
         header('Location: signin.php');
     }
     $logado = $_SESSION['email'];
-
-    $sql = "SELECT * FROM loging ORDER BY id DESC";
-
+    if(!empty($_GET['search']))
+    {
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM loging WHERE id LIKE '%$data%' or nome LIKE '%$data%' or email LIKE '%$data%' ORDER BY id DESC";
+    }
+    else
+    {
+        $sql = "SELECT * FROM loging ORDER BY id DESC";
+    }
+    
     $result = $conex->query($sql);
 
 
@@ -80,19 +87,17 @@
         <table class="table text-white table-bg">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">email</th>
                     <th scope="col">cpf</th>
                     <th scope="col">senha</th>
-                    <th scope="col">...</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                     while($user_data = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
-                        echo "<td>".$user_data['id']."</td>";
                         echo "<td>".$user_data['nome']."</td>";
                         echo "<td>".$user_data['email']."</td>";
                         echo "<td>".$user_data['cpf']."</td>";

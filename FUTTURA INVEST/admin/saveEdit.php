@@ -1,18 +1,21 @@
 <?php
 
-include_once('conect_adm.php');
-if(isset($_POST['update'])){
+    include_once('conect_adm.php');
+    if(isset($_POST['update'])){
 
-    $id = $user_data['id'];
-    $nome = $user_data['nome'];
-    $cpf = $user_data['cpf'];
-    $email = $user_data['email'];
-    $senha = $user_data['senha'];
+        $id = $_POST['id'];
+        $nome = $_POST['nome'];
+        $cpf = $_POST['cpf'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
 
-    $sqlInsert = "UPDATE loging SET nome='$nome',cpf='$cpf',email='$email',senha='$senha' WHERE id='$id'";
-    
-    $result = $conex->query($sqlInsert);
+        $sqlUpdate = "UPDATE loging SET nome='$nome', cpf='$cpf', email='$email', senha='$senha' WHERE id='$id'";
+        
+        $result = $conex->query($sqlUpdate);
 
-}
+    }
+
+    header('Location: sistema.php');
+
 
 ?>
