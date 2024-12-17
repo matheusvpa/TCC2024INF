@@ -54,6 +54,10 @@
             height: 10%;
             width: 10%;
         }
+
+        #add_usuario{
+            padding-top: 1vw;
+        }
     </style>
 </head>
 <body>
@@ -75,6 +79,7 @@
         echo "<h1>Bem vindo <u>$logado</u></h1>";
     ?>
     <br>
+
     <div class="box-search">
         <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">
         <button onclick="searchData()" class="btn btn-primary">
@@ -83,6 +88,11 @@
             </svg>
         </button>
     </div>
+
+    <div id="add_usuario">
+        <a href="formulario.php" class="btn btn-light me-5">Adicionar usuário</a>
+    </div>
+
     <div class="m-5">
         <table class="table text-white table-bg">
             <thead>
